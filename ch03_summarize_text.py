@@ -37,4 +37,4 @@ def main():
         if st.button("요약"):
             prompt = f'''
             **instruction**  :
-            - 
+            - plz ...
