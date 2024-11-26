@@ -37,4 +37,13 @@ def main():
         if st.button("요약"):
             prompt = f'''
             **instruction**  :
-            - plz ...
+            - you are an expert assistant that summarizes text into **korean language**.
+            - your task is to summarize the **text**sentences in **Korean language**.
+            - your summaries should include the following :
+            - omit duplicate content, but increase the summary weight of duplicate content.
+            - summarize by emphasizing concepts and arguments rather than case evidence.
+            - summarize in 3 lines. 
+            - use the formate of a bullet point. 
+            - text: {text}
+            '''
+            st.info(askGpt(prompt, st.session_state["OPENAI_API"]))
